@@ -1,3 +1,4 @@
+import { defineConfig, devices } from '@playwright/test';
 import { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
@@ -13,17 +14,13 @@ const config: PlaywrightTestConfig = {
 
   projects: [
     {
-      name: 'Chromium',
-      use: { browserName: 'chromium' },
+      name: 'chromium',
+      use: { 
+        ...devices['Desktop Chrome'],
+        headless: false, 
+      },
+      
     },
-    // {
-    //   name: 'Firefox',
-    //   use: { browserName: 'firefox' },
-    // },
-    // {
-    //   name: 'WebKit',
-    //   use: { browserName: 'webkit' },
-    // },
   ],
 };
 

@@ -1,6 +1,6 @@
 import { test, expect, chromium, Page } from '@playwright/test';
 import fs from 'fs';
-import LoginPage from '../src/steps/task001';
+import LoginPage from '../pages/steps/task001';
 
 test.describe("Login Tests", () => {
     test.beforeEach(async ({ page }) => {
